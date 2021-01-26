@@ -2,8 +2,8 @@ import Header from "./Header.js";
 
 function App() {
   return (
-    <div className = "header">
-      <Header/>
+    <div>
+      <Header />
     <button>Add</button>
     <div>
     <span>Name</span><br/>
