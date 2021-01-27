@@ -18,6 +18,7 @@ function App() {
       subscribers.map(sub => {return <div key = {sub.id}>
        <span id = "name">{sub.name}</span>
        <span id = "phone">{sub.phone}</span>
+       <button id = "btnd">Delete</button>
        </div> 
         })
     }

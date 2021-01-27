@@ -24,3 +24,14 @@
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: larger;
 }
+#btnd{
+    background-color: red;
+    margin-left: 30%;
+    height: 50px;    
+    width: 100px;
+    text-transform: uppercase;
+    border: none;
+    padding: 0%;
+    margin-bottom: 1%;
+
+}
