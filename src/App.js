@@ -9,7 +9,7 @@ function App() {
   ]
   return (
     <div>
-      <Header />
+      <Header heading = "phone directory"/>
     <button id = "btng">Add</button>
     <div>
     <span id = "name">Name</span>
