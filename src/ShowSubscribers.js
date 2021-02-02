@@ -1,5 +1,5 @@
 import Header from "./Header.js";
-import './ShowSubscriber.css';
+import './ShowSubscribers.css';
 import React, {Component} from 'react';
 
 class ShowSubscriber extends Component {
@@ -26,7 +26,7 @@ class ShowSubscriber extends Component {
     <span id = "name">Name</span>
     <span id = "phone">Phone</span>
     {
-      this.state.subscribersListToShow.map(sub => {return <div key = {sub.id}>
+      this.props.subscribersList.map(sub => {return <div key = {sub.id}>
        <span id = "name">{sub.name}</span>
        <span id = "phone">{sub.phone}</span>
        <button id = "btnd" onClick = {deleteHandler.bind(this, 'Delete is clicked')}>Delete</button>

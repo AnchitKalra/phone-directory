@@ -1,30 +1,35 @@
 import React, {Component} from 'react';
 import AddSubscriber from './AddSubscriber.js';
+import ShowSubscribers from './ShowSubscribers.js';
 
 class PhoneDirectory extends Component {
 
     constructor() {
         super();
-        this.state = {subscribersListToShow : []};
+        this.state = {subscribersList : [
+            {id : 1, name : "Abc", phone : "123321"}, 
+        {id : 2, name : "pqr", phone : "098890"}
+    ]};
     }
 
     addSubscriberHandler = (newSubscriber) => {
-        let subscribersListToShow = this.state.subscribersListToShow;
-        if(subscribersListToShow.length > 0) {
-            newSubscriber.id = subscribersListToShow[subscribersListToShow.length - 1].id + 1;
+        let subscribersList = this.state.subscribersList;
+        if(subscribersList.length > 0) {
+            newSubscriber.id = subscribersList[subscribersList.length - 1].id + 1;
         }
         else {
             newSubscriber.id = 1;
         }
-        subscribersListToShow.push(newSubscriber);
-        console.log(subscribersListToShow, "   id: ", newSubscriber.id);
-        this.setState({subscribersListToShow : subscribersListToShow});
+        subscribersList.push(newSubscriber);
+        //console.log(subscribersListToShow, "   id: ", newSubscriber.id);
+        this.setState({subscribersList : subscribersList});
         
     }
     render() {
 
         return(
-                <AddSubscriber addSubscriberHandler = {this.addSubscriberHandler} />
+                //<AddSubscriber addSubscriberHandler = {this.addSubscriberHandler} />
+                <ShowSubscribers subscribersList = {this.state.subscribersList}/>
         )
     }
 }
