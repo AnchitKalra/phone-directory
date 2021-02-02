@@ -1,8 +1,8 @@
 import Header from "./Header.js";
-import './App.css';
+import './ShowSubscriber.css';
 import React, {Component} from 'react';
 
-class App extends Component {
+class ShowSubscriber extends Component {
   // let subscribers = [
   //   {id : 1, name : 'Abc', phone : '1111111111'}, 
   //   {
@@ -39,4 +39,4 @@ class App extends Component {
   
 }
 }
-export default App;
+export default ShowSubscriber;
