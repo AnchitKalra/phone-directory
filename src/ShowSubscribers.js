@@ -13,11 +13,13 @@ class ShowSubscriber extends Component {
   constructor() {
     super();
     this.state = {subscribersListToShow : []};
+    
+  }
+  deleteHandler = (subscriberId) => {
+    this.props.deleteSubscriberHandler(subscriberId);
   }
   render() {
-  const deleteHandler = function (message) {
-    alert(message);
-  }
+  
   return (
     
     <div>
@@ -30,7 +32,7 @@ class ShowSubscriber extends Component {
       this.props.subscribersList.map(sub => {return <div key = {sub.id}>
        <span id = "name">{sub.name}</span>
        <span id = "phone">{sub.phone}</span>
-       <button id = "btnd" onClick = {deleteHandler.bind(this, 'Delete is clicked')}>Delete</button>
+       <button id = "btnd" onClick = {this.deleteHandler.bind(this, sub.id)}>Delete</button>
        </div> 
         })
     }
