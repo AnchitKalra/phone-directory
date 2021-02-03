@@ -1,6 +1,7 @@
 import Header from "./Header.js";
 import './ShowSubscribers.css';
 import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 
 class ShowSubscriber extends Component {
   // let subscribers = [
@@ -21,7 +22,7 @@ class ShowSubscriber extends Component {
     
     <div>
       <Header heading = "phone directory"/>
-    <button id = "btng">Add</button>
+    <Link to = "/add"><button id = "btng">Add</button></Link>
     <div>
     <span id = "name">Name</span>
     <span id = "phone">Phone</span>
